@@ -3,6 +3,11 @@ package part3;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * Dynamic Programming Algorithm to solve a 0-N Knapsack Problem
+ * @author James Sutton
+ *
+ */
 public class Knapsack_0_to_N_DP {
 
 	private static int[] weights;
@@ -71,6 +76,9 @@ public class Knapsack_0_to_N_DP {
 		System.out.println("\nTotal execution time: " + (endTime - startTime) + "ms");
 	}
 
+	/**
+	 * creates dynamic programming table
+	 */
 	private static void knapsack() {
 		
 		int[][] V = new int[rows][weightLimit+1];
@@ -102,6 +110,10 @@ public class Knapsack_0_to_N_DP {
 		recovery(V);
 	}
 
+	/**
+	 * recovers chosen values from the table
+	 * @param V
+	 */
 	private static void recovery(int[][] V) {
 		//recovery
 		choices = new int[values.length];
